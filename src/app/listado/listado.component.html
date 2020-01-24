@@ -1,0 +1,32 @@
+<!--LISTADO COMPLETO EMPLEADOS-->
+<div class="container">
+<div class="row">
+<!--<button class="btn btn-primary" (click) = "verListado()">Ver todos los empleados</button>-->
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="row">Status</th>
+    <td colspan="4">Success</td>
+  </tr>
+    <tr class="table-primary">
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Salario</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Imagen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor= 'let em of emp.data'> 
+    <td scope="row">{{em.id}}</td>
+    <td>{{em.employee_name}}</td>
+    <td>{{em.employee_salary}}</td>
+    <td>{{em.employee_age}}</td>
+    <td>{{em.profile_image}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<router-outlet></router-outlet> 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ExamenAngular';
+  constructor(private router:Router)
+  {
+  
+  }  
+
+  mostrarConsulta()
+{
+  this.router.navigate(['consulta']);
+}
+
+mostrarListado()
+{
+  this.router.navigate(['listado']);
+}
+
+mostrarMadrid()
+{
+  this.router.navigate(['madrid']);
+}
+
+mostrarToledo()
+{
+  this.router.navigate(['toledo']);
+}
+
 }

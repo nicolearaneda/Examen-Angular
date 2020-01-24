@@ -1,0 +1,51 @@
+<!-- Consulta de empleados 
+a.ConsultaComponent: Un formulario para insertar IPC e id
+ (lo usaremos para consultar una REST API). 
+ Realiza la validación para que el id sea requerido.-->
+ <div class="container">
+  <div class="row">
+
+<label for="IPC" class="mr-sm-2">IPC</label>
+<input class="form-control mb-2 mr-sm-2" type="number" name="ipc" placeholder="IPC" id="ipc">
+ 
+  <!--<button class="btn btn-primary mb-2" type="button"> Consultar </button>-->
+<button class=" btn btn-primary mb-2" (click)="verConsulta()"> Consulta </button>
+{{verConsulta()}}
+</div>
+</div>
+<router-outlet></router-outlet> 
+
+<!--
+<form class="form-inline" (submit) ="verConsulta()" #consulta="ngForm">
+  <label for="id" class="mr-sm-2">ID empleado</label>
+  <input class="form-control mb-2 mr-sm-2" type="number" name="id" placeholder="id empleado"
+  id="id" required [(ngModel)]="resultado" #id="ngModel">
+  <label for="IPC" class="mr-sm-2">IPC</label>
+    <input  class="form-control mb-2 mr-sm-2" type="number" name="ipc" placeholder="IPC" id="ipc">
+ 
+  <button class="btn btn-primary mb-2" type="button"> Consultar </button>
+  {{verConsulta()}}
+  <button class=" btn btn-primary mb-2" (click)="this.resultado"> Consulta </button>
+  
+  {{resultado}}
+  
+    </form>
+
+
+ <div class="alert alert-success" *ngIf="id.invalid && (id.dirty || id.touched)"> 
+    <div *ngIf="id.errors.required"> 
+      El id es obligatorio
+  </div>
+  </div>
+
+
+
+ <div class="form-inline">
+    <label for="IPC" class="mr-sm-2">IPC</label>
+    <input  class="form-control mb-2 mr-sm-2" type="number" name="ipc" placeholder="IPC" id="ipc"
+    [(ngModel)] = "calculo" #calcu ="ngModel">
+    <div class="alert alert-success" *ngIf="calcu.invalid && (calcu.dirty || calcu.touched)"> 
+        El IPC debe ser un número
+    </div>
+  </div>
+-->
